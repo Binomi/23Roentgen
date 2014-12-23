@@ -1,4 +1,0 @@
-23Roentgen
-==========
-
-Röntgenstrahlung

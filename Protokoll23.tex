@@ -177,49 +177,91 @@ E-Mail:
 
 \section{Einleitung}
 \label{sec:einleitung}
+In diesem Versuch sollen mithilfe der Bragg-Reflexion die Eigenschaften von Röntgenstrahlung untersucht werden.
+Dabei kann zum einen die \emph{Bremsstrahlung} als auch die für jedes Material \emph{charakteristische Strahlung} beobachtet werden.
+Außerdem werden noch zwei Naturkonstanten der Atomphysik bestimmt: das \emph{Plancksche Wirkungsquantum} und die \emph{Rydberg-Frequenz}.
 
 \section{Theorie}
 \label{sec:theorie}
-\subsection{Röntgenröhre}
+\subsection{Röntgenröhre und Bragg-Reflexion}
+In einer Röntgenröhre (vgl. Abb.\ref{fig:Aufbau}) werden Elektronen durch einen Glühdraht emittiert und anschließend auf eine Anode beschleunigt.
+Dort wechselwirken sie mit dem Anodenmaterial und es entsteht elektromagnetische Strahlung.
+Diese ist bei den typischen Beschleunigungsspannungen $U_A$, die sich bei mehren Kilo-Volt bewegen, energiereicher als Licht.
+Man nennt sie im deutschen Sprachraum nach ihrem Entdecker \textsc{Wilhelm Conrad Röntgen} \emph{Röntgenstrahlung}. \\
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.7]{Aufbau.png}
-	\caption{Aufbau. \cite[Datum: 02.01.15]{LP23}}
+	\caption{Aufbau einer Röntgenröhre mit Detektor. \cite[Datum: 02.01.15]{LP23}}
+	\label{fig:Aufbau}
 \end{figure}
+
+Um die Strahlung zu charakterisieren, trifft sie auf ein Kristallgitter, dessen Atomabstand im Bereich der Wellenlänge liegt.
+Dort kommt es zur \emph{Bragg-Reflexion}, welche in Abb.\ref{fig:Bragg} dargestellt wird.
+Die Strahlen werden an mehreren Kristallschichten reflektiert.
+Dabei kommt es zu Gangunterschieden, welche ein ganzzahliges Vielfaches $n$ der Wellenlänge sein müssen, damit es zur konstruktiven Interferenz kommt und man am Detektor ein Signal erkennt.
+So lässt sich also der Ablenkwinkel $2\theta$ in eine bestimmte Wellenlänge $\lambda$ umrechnen:
+\begin{align}
+	2d\sin\theta=n\lambda\,.
+	\label{eq:Bragg}
+\end{align}
+Dies nennt man die \emph{Bragg-Bedingung}.
+
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.7]{Bragg.png}
 	\caption{Bragg-Reflexion schematisch. \cite[Datum: 02.01.15]{LP23}}
+	\label{fig:Bragg}
 \end{figure}
-\begin{align}
-	2d\sin\theta=n\lambda
-\end{align}
 
 \subsection{Geiger-Müller-Zählrohr}
+Die Röntgenstrahlung wird durch ein Geiger-Müller-Zählrohr detektiert.
+Dort ionisiert sie nämlich Atome und setzt somit Elektronen frei.
+Diese lösen eine Kaskade an weiteren Elektronen aus und ein Strom kann gemessen werden.
+Da das Zählrohr eine gewisse Zeit benötigt, bis es ein neues Ereignis detektieren kann, (\emph{Totzeit}), müssen die Impulsraten $N$ (Impulse/Sekunde) durch folgende Formel korrigiert werden:
 \begin{align}
-	N_\text{korrigiert}=\frac{N_\text{gemessen}}{1-\tau\cdot N_\text{gemessen}}
+	N_\text{korrigiert}=\frac{N_\text{gemessen}}{1-\tau\cdot N_\text{gemessen}}\,.
 \end{align}
+Dabei ist $\tau$ die Totzeit, die sich typischerweise im Bereich von $100 ~ \mu$s befindet.
+Man berechnet nämlich die Wahrscheinlichkeit mit ein, dass ein Ereignis stattgefunden hat, dieses aber nicht detektiert werden konnte.
 
-\subsection{charakteristische Röntgenstrahlung}
+\subsection{Bremsstrahlung}
+Das Elektron überträgt Energie an das Photon, wenn es mit dem Anodenmaterial wechselwirkt.
+Läuft dieser Prozess ideal ab, gibt das Elektron seine gesamte Energie $E=e\cdot U_A$ an das Photon ab, dessen Energie $E=h\cdot \nu=\frac{hc}{\lambda}$ beträgt.
+Setzt man also beide Energien gleich, kann man die minimal erreichbare Wellenlänge $\lambda_\text{gr}$ berechnen:
 \begin{align}
-	v_K=R_v (Z-1)^2\left(\frac{1}{n_f^2}-\frac{1}{n_s^2}\right)
+	\lambda_\text{gr}=\frac{hc}{e \cdot U_A}\,.
+	\label{eq:grenzLambda}
 \end{align}
+Sie hängt nur von der Beschleunigungsspannung $U_A$ ab, da die Elektronenladung $e$, die Vakuum-Lichtgeschwindigkeit $c$ sowie das Plancksche Wirkungsquantum $h$ Naturkonstanten sind.\\
+Da aber die wenigsten Photonen die gesamte Elektronenenergie erhalten, ergibt sich eine typische, kontinuierliche Intensitätsverteilung, deren Maximum sich bei einer etwas größeren Wellenlänge befindet.
+Man nennt dies \emph{Bremsstrahlung}.
 
+\subsection{Charakteristische Röntgenstrahlung}
+Neben der Bremsstrahlung misst man auch noch die für das Anodenmaterial \emph{charakteristische Strahlung}.
+Dabei entspricht die Photonen-Energie genau einer Differenz von zwei Energieniveaus: $E_\text{ph}=h\nu=E_s-E_f$.
+Ist das untere Niveau $E_f$ die K-Schale, spricht man von K-Linien.
+Der Übergang von der L-Schale auf die K-Schale wird mit K$\alpha$ bezeichnet, der von M-Schale mit K$\beta$.
+Diese Energiedifferenzen der K-Linien kann man mithilfe des \emph{Moseley-Gesetzes}
 \begin{align}
-	v_L=R_v (Z-\sigma_L)^2\left(\frac{1}{n_f^2}-\frac{1}{n_s^2}\right)
+	\nu_K=R_\nu (Z-1)^2\left(\frac{1}{n_f^2}-\frac{1}{n_s^2}\right)
 \end{align}
+berechnen.
+Dabei ist $\nu_K$ die Frequenz des Photons, $R_\nu$ die \emph{Rydberg-Frequenz}, $Z$ die Kernladungszahl des Atoms und $n_s$ bzw. $n_f$ kennzeichnen das obere/untere Niveau.
+Für die K-Schale ist $n=1$, für die L-Schale gilt $n=2$, etc.
+Analog kann man auch die Energien für die anderen Linien berechnen.
+Dabei muss aber die Kernladungszahl um die für jede Schale typische Abschirmkonstante $\sigma$ verringert werden.
+Anhand der obigen Formel (K-Schale) erkennt man: $\sigma_K=1$.\\
 
-\subsection{Abhängigkeit der Intensität von der Anodenspannung}
-\begin{align}
-	\lambda_\text{gr}=\frac{hc}{e \cdot U_A}
-\end{align}
-
+Die Intensität $I_K$ der charakteristischen Strahlung hängt über
 \begin{align}
 	I_K \sim I_A\cdot(U_A-U_K)^{3/2}
+	\label{eq:IntChara}
 \end{align}
+von dem Anodenstrom $I_A$ sowie der Anodenspannung $U_A$ und dem Ionisationspotential $U_K$ ab.
 
 \section{Durchführung}
 \label{sec:durchfuehrung}
+Nach Anschalten der Röntgenröhre, des Computers und Starten des Messprogramms \textsc{measure} 
 
 \section{Auswertung}
 \label{sec:auswertung}

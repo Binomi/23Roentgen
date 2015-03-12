@@ -1,5 +1,5 @@
-Kristallwinkel	Rate bei 25kV mit Ni
-theta/°	R(25kV)/Imp/s
+#Kristallwinkel	Rate bei 25kV mit Ni
+#theta/°	R(25kV)/Imp/s
 
 21.0	5.0
 21.1	4.0

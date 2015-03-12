@@ -1,5 +1,5 @@
-Kristallwinkel	Rate bei 25kV mit Zn
-theta/°	R(25kV)/Imp/s
+#Kristallwinkel	Rate bei 25kV mit Zn
+#theta/°	R(25kV)/Imp/s
 
 8.0	33.0
 9.0	52.0

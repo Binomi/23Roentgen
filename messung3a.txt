@@ -1,5 +1,5 @@
-Kristallwinkel	Rate bei 23kV	Rate bei 26kV	Rate bei 29kV	Rate bei 32kV	Rate bei 35kV
-theta/°	R(23kV)/Imp/s	R(26kV)/Imp/s	R(29kV)/Imp/s	R(32kV)/Imp/s	R(35kV)/Imp/s
+#Kristallwinkel	Rate bei 23kV	Rate bei 26kV	Rate bei 29kV	Rate bei 32kV	Rate bei 35kV
+#theta/°	R(23kV)/Imp/s	R(26kV)/Imp/s	R(29kV)/Imp/s	R(32kV)/Imp/s	R(35kV)/Imp/s
 
 3.0	25.0	72.0	133.0	224.0	379.0
 3.1	32.0	64.0	131.0	217.0	367.0

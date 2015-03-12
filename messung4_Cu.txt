@@ -1,5 +1,5 @@
-Kristallwinkel	Rate bei 25kV mit Cu
-theta/°	R(25kV)/Imp/s
+#Kristallwinkel	Rate bei 25kV mit Cu
+#theta/°	R(25kV)/Imp/s
 
 19.5	7.0
 19.6	7.0

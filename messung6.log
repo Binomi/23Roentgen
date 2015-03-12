@@ -1,0 +1,138 @@
+
+
+*******************************************************************************
+Thu Mar 12 17:52:57 2015
+
+
+FIT:    data read from 'messung5.csv' u ((2*20.1*sin($1/180*pi))**3):(log(N($2)/N($3))/Al_d/Al_rho)
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 8.98091e+06       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 540.848
+
+initial set of free parameter values
+
+a               = 1.23034
+b               = 67.6254
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 0.0928572
+rel. change during last iteration : -3.26704e-13
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.115175
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0132653
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000777597      +/- 9.957e-05    (12.81%)
+b               = 0.574323         +/- 0.07616      (13.26%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.864  1.000 
+
+
+*******************************************************************************
+Thu Mar 12 17:52:57 2015
+
+
+FIT:    data read from 'messung5.csv' u ((2*20.1*sin($1/180*pi))**3):(log(N($2)/N($4))/Zn_d/Zn_rho)
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: h(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.95016e+13       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 540.848
+
+initial set of free parameter values
+
+c               = -3066.18
+d               = 1
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 1.82412
+rel. change during last iteration : -1.19687e-07
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.510479
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.260589
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+c               = 0.00724217       +/- 0.0004413    (6.094%)
+d               = 2.16091          +/- 0.3376       (15.62%)
+
+
+correlation matrix of the fit parameters:
+
+               c      d      
+c               1.000 
+d              -0.864  1.000 
+
+
+*******************************************************************************
+Thu Mar 12 17:52:57 2015
+
+
+FIT:    data read from 'messung5.csv' u ((2*20.1*sin($1/180*pi))**3):(log(N($2)/N($5))/Sn_d/Sn_rho)
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 5.20521e+06       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 540.848
+
+initial set of free parameter values
+
+e               = 1
+f               = 1
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 0.232245
+rel. change during last iteration : -3.55872e-08
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.182148
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0331779
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+e               = 0.00521784       +/- 0.0001575    (3.018%)
+f               = 1.44663          +/- 0.1204       (8.326%)
+
+
+correlation matrix of the fit parameters:
+
+               e      f      
+e               1.000 
+f              -0.864  1.000 

@@ -1,7 +1,7 @@
 reset
 set terminal epslatex color
 set output 'anode.tex'
-set xlabel '$(U_A-U_K)^{1.5}$'
+set xlabel '$(U_A-U_K)^{1.5}$ [kV$^3$]'
 set ylabel 'Imp/s'
 set key top left
 

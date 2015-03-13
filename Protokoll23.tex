@@ -220,6 +220,7 @@ Diese lösen eine Kaskade an weiteren Elektronen aus und ein Strom kann gemessen
 Da das Zählrohr eine gewisse Zeit benötigt, bis es ein neues Ereignis detektieren kann, (\emph{Totzeit}), müssen die Impulsraten $N$ (Impulse/Sekunde) durch folgende Formel korrigiert werden:
 \begin{align}
 	N_\text{korrigiert}=\frac{N_\text{gemessen}}{1-\tau\cdot N_\text{gemessen}}\,.
+	\label{eq:totzeit}
 \end{align}
 Dabei ist $\tau$ die Totzeit, die sich typischerweise im Bereich von $100 ~ \mu$s befindet.
 Man berechnet nämlich die Wahrscheinlichkeit mit ein, dass ein Ereignis stattgefunden hat, dieses aber nicht detektiert werden konnte.
@@ -278,13 +279,33 @@ Die weiteren Werte betragen $U=25\,$kV, $I=1\,$mA und $\Delta t=30\,$s.
 
 \section{Auswertung}
 \label{sec:auswertung}
+Die verwendete Röntgenröhre hat eine Eisenanode und der Kristall besteht aus Lithiumfluorid mit einem Gitterabstand $d=201\,$pm.
+Außerdem wird für die Totzeit des Detektors $\tau=100\,\mu$s angegeben.
+So müssen zuerst alle Messwerte mit der Formel \eqref{eq:totzeit} korrigiert werden.
 \subsection{Charakteristisches Spektrum von Eisen}
 \subsubsection{Wellenlängen und Energien}
 \begin{figure}[!htb]
 	\centering
 	\input{messung2.tex}
-	\caption{Spektrum aus Messung 2}
+	\caption{Spektrum aus der Messung der charakteristischen Fe-Strahlung}
+	\label{fig:messung2}
 \end{figure}
+In Abb.\ref{fig:messung2} ist die Zählrate gegen den Kristallwinkel aufgetragen.
+Man sieht deutlich die Peaks der charakteristischen Strahlung von Eisen.
+Der Winkel $\theta$ kann mit \eqref{eq:Bragg} in eine Wellenlänge $\lambda$ umgerechnet werden.
+Der sich ergebende Fehler $\sigma_\lambda$ kann mit der Formel
+\begin{align}
+	\sigma_\lambda=\frac{2d}{n}\cos(\theta)\cdot\sigma_\theta
+\end{align}
+berechnet werden, welche der Fehlerfortpflanzung entstammt.
+Die Wellenlänge kann nun in eine Energie umgerechnet werden:
+\begin{align}
+	E&=\frac{hc}{\lambda}\\
+	\sigma_E&=\frac{hc}{\lambda^2}\cdot\sigma_\lambda
+\end{align}
+Dabei werden für die beiden Naturkonstanten folgende Werte verwendet: $h=6.626\cdot 10^{-34}\,$Js und $c=2.998\cdot 10^8\,$m/s.
+Die sich so ergebenen Wert sind in Tabelle \ref{tab:FeChar} dargestellt.
+
 \begin{table}[!htb]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|}
@@ -299,19 +320,27 @@ Die weiteren Werte betragen $U=25\,$kV, $I=1\,$mA und $\Delta t=30\,$s.
 		& 2 & $60.8^\circ \pm 0.2^\circ$ &  $175.5 \pm 0.4$& $7065 \pm 17$ &\\
 		\hline
 	\end{tabular}
+	\caption{Wellenlängen und Energien der charakteristischen Fe-Strahlung}
+	\label{tab:FeChar}
 \end{table}
 
 \subsubsection{Abhängigkeit von der Anodenspannung}
+In Abb.\ref{fig:messung3b} ist die Zählrate für verschiedene Spannungen im Bereich der Charakteristischen Strahlung gegen den Winkel aufgetragen.
+Daraus kann man die Abhängigkeit aus \eqref{eq:IntChara} bestätigen.
+Trägt man nämlich die Impulsrate der beiden Peaks gegen $(U_A-U_K)^{1.5}$ auf, ergibt sich in beiden Fällen eine Gerade (vgl Abb.\ref{fig:anode}).
+Für die Rate wurde ein prozentualer Fehler von $1\%$ angenommen.
 \begin{figure}[!htb]
 	\centering
 	\input{messung3b.tex}
 	\caption{Messwerte im Bereich der charakteristischen Strahlung}
+	\label{fig:messung3b}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\input{anode.tex}
 	\caption{Charakteristische Strahlung: Intensität in Abhängigkeit der Anodenspannnung}
+	\label{fig:anode}
 \end{figure}
 
 \subsubsection{Grenzwellenlänge der Bremsstrahlung und Plancksche Konstante}
@@ -325,7 +354,10 @@ Die weiteren Werte betragen $U=25\,$kV, $I=1\,$mA und $\Delta t=30\,$s.
 	\centering
 	\input{grenzLambda.tex}
 	\caption{Produkt aus Beschleunigungsspannung und zugehöriger Grenzwellenlänge in Abhängigkeit der Spannung}
+	\label{fig:grenzLambda}
 \end{figure}
+
+Trägt man nun das Produkt aus Anodenspannung $U_A$ und Grenzwellenlänge $\lambda_\text{gr}$ mit dem sich aus der Fehlerfortpflanzung folgenden Fehler $\sigma=U_A\cdot\sigma_{\lambda_\text{gr}}$ gegen die Anodenspannung auf, sollte sich nach Umstellen von \eqref{eq:grenzLambda} die Konstante $\frac{hc}{e}$ ergeben.
 
 \begin{empheq}[box=\shadowbox]{align}
 	h=(6.57 \pm 0.06)~10^{-34}\si{\joule\second}

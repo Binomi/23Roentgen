@@ -244,14 +244,15 @@ Ist das untere Niveau $E_f$ die K-Schale, spricht man von K-Linien.
 Der Übergang von der L-Schale auf die K-Schale wird mit K$\alpha$ bezeichnet, der von M-Schale mit K$\beta$.
 Diese Energiedifferenzen der K-Linien kann man mithilfe des \emph{Moseley-Gesetzes}
 \begin{align}
-	\nu_K=R_\nu (Z-1)^2\left(\frac{1}{n_f^2}-\frac{1}{n_s^2}\right)
+	\nu_K=R_\nu (Z-\sigma)^2\left(\frac{1}{n_f^2}-\frac{1}{n_s^2}\right)
+	\label{eq:moseley}
 \end{align}
 berechnen.
-Dabei ist $\nu_K$ die Frequenz des Photons, $R_\nu$ die \emph{Rydberg-Frequenz}, $Z$ die Kernladungszahl des Atoms und $n_s$ bzw. $n_f$ kennzeichnen das obere/untere Niveau.
+Dabei ist $\nu_K$ die Frequenz des Photons, $R_\nu$ die \emph{Rydberg-Frequenz}, $Z$ die Kernladungszahl des Atoms, die um die Abschirmkonstante $\sigma$ verringert wird, und $n_s$ bzw. $n_f$ kennzeichnen das obere/untere Niveau.
 Für die K-Schale ist $n=1$, für die L-Schale gilt $n=2$, etc.
 Analog kann man auch die Energien für die anderen Linien berechnen.
 Dabei muss aber die Kernladungszahl um die für jede Schale typische Abschirmkonstante $\sigma$ verringert werden.
-Anhand der obigen Formel (K-Schale) erkennt man: $\sigma_K=1$.\\
+Für den K$\alpha$-Übergang ist $\sigma_K=1$.\\
 
 Die Intensität $I_K$ der charakteristischen Strahlung hängt über
 \begin{align}
@@ -259,6 +260,22 @@ Die Intensität $I_K$ der charakteristischen Strahlung hängt über
 	\label{eq:IntChara}
 \end{align}
 von dem Anodenstrom $I_A$ sowie der Anodenspannung $U_A$ und dem Ionisationspotential $U_K$ ab.
+
+\subsection{Absorption von Röntgenstrahlung}
+Trifft Röntgenstrahlung auf ein Material, wird sie abhängig vom Absorptionskoeffizient $\mu$ des Materials nach dem \emph{Lambert-beerschen Gesetz}
+\begin{align}
+	I(d)=I_0\cdot e^{-\mu d}
+	\label{eq:absorption}
+\end{align}
+abgeschwächt.
+Dabei ist $I_0$ die anfängliche Intensität und $I(d)$ die Intensität nach der Länge $d$.
+Der Koeffizient $\mu$ hängt auch von der Wellenlänge $\lambda$ der Röntgenstrahlung ab, es gilt nämlich die Beziehung 
+\begin{align}
+	\frac{\mu}{\rho}\sim\lambda^3\,.
+	\label{eq:abs_koeff(lambda)}
+\end{align}
+Dabei ist $\rho$ die Dichte des Materials und der Quotient $\frac{\mu}{\rho}$ der \emph{Massenschwächungskoeffizient}.
+
 
 \section{Durchführung}
 \label{sec:durchfuehrung}
@@ -276,6 +293,7 @@ Die weiteren Werte betragen $U=25\,$kV, $I=1\,$mA, $\Delta\theta=0.1^\circ$ und 
 Als letztes wird in einem Bereich zwischen $8^\circ$ und $16^\circ$ mit $\Delta\theta=1^\circ$ die Absorption verschiedener Materialien (verschiedene Kernladungszahlen) vermessen.
 Dazu wird als erstes ein Spektrum ohne Absorber aufgenommen, dann 0.08 mm dickes Aluminium sowie 0.025 mm dickes Zink und Zinn.
 Die weiteren Werte betragen $U=25\,$kV, $I=1\,$mA und $\Delta t=30\,$s.
+\newpage
 
 \section{Auswertung}
 \label{sec:auswertung}
@@ -336,19 +354,30 @@ Für die Rate wurde ein prozentualer Fehler von $1\%$ angenommen.
 	\label{fig:messung3b}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htb]
 	\centering
 	\input{anode.tex}
 	\caption{Charakteristische Strahlung: Intensität in Abhängigkeit der Anodenspannnung}
 	\label{fig:anode}
 \end{figure}
 
-\subsubsection{Grenzwellenlänge der Bremsstrahlung und Plancksche Konstante}
+\subsection{Grenzwellenlänge der Bremsstrahlung und Plancksche Konstante}
 \begin{figure}[!htb]
 	\centering
 	\input{messung3a.tex}
 	\caption{Messwerte im Bereich der Grenzwellenlänge}
+	\label{fig:messung3a}
 \end{figure}
+
+In Abb.\ref{fig:messung3a} sind für verschiedene Beschleunigungsspannungen die Impulsraten gegen den Kristallwinkel aufgetragen.
+Man kann gut erkennen, dass bei höherer Spannung  der Grenzwinkel und damit auch die Grenzwellenlänge geringer wird.
+Bei der Bestimmung des Grenzwinkels wird eine Unsicherheit von $0.2^\circ$ angenommen, da das Ablesen teilweise etwas schwierig war.
+Über Formel \eqref{eq:Bragg} kann man wieder aus dem Winkel die zugehörige Wellenlänge bestimmen ($n=1$).
+Trägt man nun das Produkt aus Anodenspannung $U_A$ und Grenzwellenlänge $\lambda_\text{gr}$ mit dem sich aus der Fehlerfortpflanzung folgenden Fehler $\sigma=U_A\cdot\sigma_{\lambda_\text{gr}}$ gegen die Anodenspannung auf, sollte sich nach Umstellen von \eqref{eq:grenzLambda} die Konstante $\frac{hc}{e}$ ergeben (vgl. Abb.\ref{fig:grenzLambda}).
+Mit den Werten $e=1.602\cdot 10^{-19}\,$C und $c=2.998\cdot 10^8\,$m/s kann man nun das Planksche Wirkungsquantum bestimmen:
+\begin{empheq}[box=\shadowbox]{align}
+	h=(6.57 \pm 0.06)~10^{-34}\si{\joule\second}\,.
+\end{empheq}
 
 \begin{figure}[!htb]
 	\centering
@@ -357,48 +386,72 @@ Für die Rate wurde ein prozentualer Fehler von $1\%$ angenommen.
 	\label{fig:grenzLambda}
 \end{figure}
 
-Trägt man nun das Produkt aus Anodenspannung $U_A$ und Grenzwellenlänge $\lambda_\text{gr}$ mit dem sich aus der Fehlerfortpflanzung folgenden Fehler $\sigma=U_A\cdot\sigma_{\lambda_\text{gr}}$ gegen die Anodenspannung auf, sollte sich nach Umstellen von \eqref{eq:grenzLambda} die Konstante $\frac{hc}{e}$ ergeben.
-
-\begin{empheq}[box=\shadowbox]{align}
-	h=(6.57 \pm 0.06)~10^{-34}\si{\joule\second}
-\end{empheq}
-
 \subsection{Absorptionskanten und Rydberg-Konstante}
+Nun befinden sich Kupfer- und Nickel-Folien im Strahlengang.
+Trägt man nun die Impulsraten logarithmisch gegen den Winkel $\theta$ auf, erkennt man sehr gut die Absorptionskanten der beiden Materialien (vgl. Abb.\ref{fig:messung4}).
+Aus der Winkelposition kann wieder mit \eqref{eq:Bragg} die zugehörige Wellenlänge berechnet werden.
+Nutzt man $\nu=\frac{c}{\lambda}$ und stellt dann Formel \eqref{eq:moseley} um, kann man die Rydbergfrequenz und mit der Fehlerfortpflanzung auch den zugehörigen Fehler berechnen:
+\begin{align}
+	R_\nu&=\frac{c}{(Z-\sigma)^2\cdot\left(\frac{1}{n_f^2}-\frac{1}{n_s^2}\right)}\cdot \frac{1}{\lambda}\,,\\
+	\sigma_{R_\nu}&=\frac{c}{(Z-\sigma)^2\cdot\left(\frac{1}{n_f^2}-\frac{1}{n_s^2}\right)}\cdot \frac{\sigma_\lambda}{\lambda^2}\,.
+\end{align}
+Geht man davon aus, dass ein K$\alpha$-Übergang für die Kante verantwortlich ist, muss man mit $\sigma=1$, $n_f=1$ und $n_s=2$ rechnen.
+Ist der beobachtete Sprung jedoch ein K$\beta$-Übergang sind diese Werte zu benutzen: $\sigma=1.8$, $n_f=1$ und $n_s=3$.
+Die so berechneten Werte finden sich in Tabelle \ref{tab:Rydberg} wieder.
 \begin{figure}[!htb]
 	\centering
 	\input{messung4.tex}
 	\caption{Absorptionskanten von Kupfer und Nickel: Intensität logarithmisch gegen Winkel aufgetragen}
+	\label{fig:messung4}
 \end{figure}
-\begin{table}
+
+\begin{table}[!htb]
 	\centering
-	\begin{tabular}{|c|c|c|c|}
+	\begin{tabular}{|c|c|c|c|c|}
 		\hline
-		& Winkel $\theta$ & Wellenlänge $\lambda$ [pm] & Rydbergfrequenz $R_\nu$\\
+		& & & \multicolumn{2}{c|}{Rydbergfrequenz $R_\nu$ [$10^{15}~\si{Hz}$]} \\		
+		& Winkel $\theta$ & Wellenlänge $\lambda$ [pm] & K$\alpha$-Übergang & K$\beta$-Übergang\\
 		\hline
-		Kupfer & $20.2^\circ \pm 0.2^\circ$ & $138.8 \pm 1.4$ & $(3.67 \pm 0.04)\cdot 10^{15}~\si{Hz}$  \\
-		Nickel & $21.8^\circ \pm 0.2^\circ$ & $149.8 \pm 1.4$ & $(3.67 \pm 0.04)\cdot 10^{15}~\si{Hz}$  \\
+		Kupfer & $20.2^\circ \pm 0.2^\circ$ & $138.8 \pm 1.4$ & $3.67 \pm 0.04$ & $3.28 \pm 0.04$\\
+		Nickel & $21.8^\circ \pm 0.2^\circ$ & $149.8 \pm 1.4$ & $3.67 \pm 0.04$ & $3.29 \pm 0.04$ \\
 		\hline
 	\end{tabular}
 	\caption{Absorptionskanten von Kupfer und Nickel und die daraus berechnete Rydbergfrequenz}
+	\label{tab:Rydberg}
 \end{table}
 
 \subsection{Absorptionskoeffizienten verschiedener Metalle}
 \begin{figure}[!htb]
 	\centering
 	\input{messung5.tex}
-	\caption{...}
+	\caption{Absorption verschiedener Materialien: Impulsrate gegen Kristallwinkel}
+	\label{fig:messung5}
 \end{figure}
-
+In Abb.\ref{fig:messung5} ist wieder die Zählrate gegen den Winkel aufgetragen.
+Jedoch befanden sich verschiedene Materialien im Strahlengang, deren Absorption im Plot sichtbar wird.
+So ist die Kurve mit der höchsten Intensität die ohne Absorber, die mit der niedrigsten ist mit Zink im Strahlengang aufgenommen worden.
+Aus \eqref{eq:absorption} kann man durch Umstellen den Absorptionskoeffizienten berechnen:
+\begin{align}
+	\mu=\frac{1}{d}\cdot\ln\frac{I_0}{I(d)}\,.
+\end{align}
+Den so erhaltenen Wert muss man nun durch die Dichte de Materials teilen, um den Massenschwächungskoeffizienten zu berechnen.
+Dabei werden folgende Werte für die Dichte verwendet: $\rho_\text{Al}=2.7\,$g/cm$^3$, $\rho_\text{Zn}=7.14\,$g/cm$^3$ und $\rho_\text{Sn}=7.28\,$g/cm$^3$.
+Zur Überprüfung der Beziehung \eqref{eq:abs_koeff(lambda)} trägt man den Massenschwächungskoeffizient gegen die dritte Potenz der Wellenlänge auf (vgl. Abb.\ref{fig:abs_koeff(lambda)}).
+Man erkennt bei allen drei Materialien den zu erwartenden linearen Zusammenhang.
 \begin{figure}[!htb]
 	\centering
 	\input{messung6.tex}
-	\caption{...}
+	\caption{Massenschwächungskoeffizient in Abhängigkeit von der dritten Potenz der Wellenlänge}
+	\label{fig:abs_koeff(lambda)}
 \end{figure}
 
 \section{Diskussion}
 \label{sec:diskussion}
+\subsection{Charakteristische Fe-Strahlung}
+\subsection{Bremsstrahlung und Planck-Konstante}
 
-\section{Anhang}
+\subsection{Rydberg-Konstante}
+\subsection{Absorption}
 
 \bibliography{literatur}
 \bibliographystyle{babalpha}

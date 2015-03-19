@@ -187,7 +187,7 @@ Außerdem werden noch zwei Naturkonstanten der Atomphysik bestimmt: das \emph{Pl
 In einer Röntgenröhre (vgl. Abb.\ref{fig:Aufbau}) werden Elektronen durch einen Glühdraht emittiert und anschließend auf eine Anode beschleunigt.
 Dort wechselwirken sie mit dem Anodenmaterial und es entsteht elektromagnetische Strahlung.
 Diese ist bei den typischen Beschleunigungsspannungen $U_A$, die sich bei mehren Kilo-Volt bewegen, energiereicher als Licht.
-Man nennt sie im deutschen Sprachraum nach ihrem Entdecker \textsc{Wilhelm Conrad Röntgen} \emph{Röntgenstrahlung}. \\
+Man nennt sie im deutschen Sprachraum nach ihrem Entdecker \textsc{Wilhelm Conrad Röntgen} \emph{Röntgenstrahlung} \cite[S.828]{gerthsen}. \\
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.7]{Aufbau.png}
@@ -204,7 +204,7 @@ So lässt sich also der Ablenkwinkel $2\theta$ in eine bestimmte Wellenlänge $\
 	2d\sin\theta=n\lambda\,.
 	\label{eq:Bragg}
 \end{align}
-Dies nennt man die \emph{Bragg-Bedingung}.
+Dies nennt man die \emph{Bragg-Bedingung} \cite[S.830]{gerthsen}.
 
 \begin{figure}[!h]
 	\centering
@@ -216,8 +216,8 @@ Dies nennt man die \emph{Bragg-Bedingung}.
 \subsection{Geiger-Müller-Zählrohr}
 Die Röntgenstrahlung wird durch ein Geiger-Müller-Zählrohr detektiert.
 Dort ionisiert sie nämlich Atome und setzt somit Elektronen frei.
-Diese lösen eine Kaskade an weiteren Elektronen aus und ein Strom kann gemessen werden.
-Da das Zählrohr eine gewisse Zeit benötigt, bis es ein neues Ereignis detektieren kann, (\emph{Totzeit}), müssen die Impulsraten $N$ (Impulse/Sekunde) durch folgende Formel korrigiert werden:
+Diese lösen eine Kaskade an weiteren Elektronen aus und ein Strom kann gemessen werden \cite[S.481ff]{gerthsen}.
+Da das Zählrohr eine gewisse Zeit benötigt, bis es ein neues Ereignis detektieren kann, (\emph{Totzeit}) \cite[S.950]{gerthsen}, müssen die Impulsraten $N$ (Impulse/Sekunde) durch folgende Formel korrigiert werden:
 \begin{align}
 	N_\text{korrigiert}=\frac{N_\text{gemessen}}{1-\tau\cdot N_\text{gemessen}}\,.
 	\label{eq:totzeit}
@@ -235,14 +235,14 @@ Setzt man also beide Energien gleich, kann man die minimal erreichbare Wellenlä
 \end{align}
 Sie hängt nur von der Beschleunigungsspannung $U_A$ ab, da die Elektronenladung $e$, die Vakuum-Lichtgeschwindigkeit $c$ sowie das Plancksche Wirkungsquantum $h$ Naturkonstanten sind.\\
 Da aber die wenigsten Photonen die gesamte Elektronenenergie erhalten, ergibt sich eine typische, kontinuierliche Intensitätsverteilung, deren Maximum sich bei einer etwas größeren Wellenlänge befindet.
-Man nennt dies \emph{Bremsstrahlung}.
+Man nennt dies \emph{Bremsstrahlung} \cite[S.835]{gerthsen}.
 
 \subsection{Charakteristische Röntgenstrahlung}
 Neben der Bremsstrahlung misst man auch noch die für das Anodenmaterial \emph{charakteristische Strahlung}.
 Dabei entspricht die Photonen-Energie genau einer Differenz von zwei Energieniveaus: $E_\text{ph}=h\nu=E_s-E_f$.
 Ist das untere Niveau $E_f$ die K-Schale, spricht man von K-Linien.
 Der Übergang von der L-Schale auf die K-Schale wird mit K$\alpha$ bezeichnet, der von M-Schale mit K$\beta$.
-Diese Energiedifferenzen der K-Linien kann man mithilfe des \emph{Moseley-Gesetzes}
+Diese Energiedifferenzen der K-Linien kann man mithilfe des \emph{Moseley-Gesetzes} \cite[S.836f]{gerthsen}
 \begin{align}
 	\nu_K=R_\nu (Z-\sigma)^2\left(\frac{1}{n_f^2}-\frac{1}{n_s^2}\right)
 	\label{eq:moseley}
@@ -259,10 +259,10 @@ Die Intensität $I_K$ der charakteristischen Strahlung hängt über
 	I_K \sim I_A\cdot(U_A-U_K)^{3/2}
 	\label{eq:IntChara}
 \end{align}
-von dem Anodenstrom $I_A$ sowie der Anodenspannung $U_A$ und dem Ionisationspotential $U_K$ ab.
+von dem Anodenstrom $I_A$ sowie der Anodenspannung $U_A$ und dem Ionisationspotential $U_K$ ab \cite[S.207]{prakti}.
 
 \subsection{Absorption von Röntgenstrahlung}
-Trifft Röntgenstrahlung auf ein Material, wird sie abhängig vom Absorptionskoeffizient $\mu$ des Materials nach dem \emph{Lambert-beerschen Gesetz}
+Trifft Röntgenstrahlung auf ein Material, wird sie abhängig vom Absorptionskoeffizient $\mu$ des Materials nach dem \emph{Lambert-beerschen Gesetz} \cite[S.838ff]{gerthsen}
 \begin{align}
 	I(d)=I_0\cdot e^{-\mu d}
 	\label{eq:absorption}
@@ -464,7 +464,7 @@ Das Experiment stimmt also mit der Theorie überein.\\
 Der Messwert für die Planck-Konstante ist weniger als $1\%$ geringer als der tatsächliche Wert $h=6.626\cdot 10^{-34}\,$Js.
 Außerdem liegt dieser Wert im Fehlerintervall.
 Somit wurde das Plancksche Wirkungsquantum in diesem Versuch zufriedenstellend bestimmt.\\
-Die hohen Impulsraten bei kleineren Winkeln als des Grenzwinkels (vgl. Abb.\ref{fig:messung3a} deuten jedoch auf einen Fehler im Aufbau, etc. hin, da sie theoretisch nicht möglich sind.
+Die hohen Impulsraten bei kleineren Winkeln als des Grenzwinkels (vgl. Abb.\ref{fig:messung3a}) deuten jedoch auf einen Fehler im Aufbau, etc. hin, da sie theoretisch nicht möglich sind.
 Warum sie trotzdem gemessen wurden, bleibt ein Rätsel.
 
 \subsection{Rydberg-Konstante}
@@ -474,7 +474,9 @@ Die Abweichung ist sehr gering ($<1\%$) und außerdem liegt der Literaturwert in
 
 \subsection{Absorption}
 In Abb.\ref{fig:abs_koeff(lambda)} kann man die erwartete Gesetzmäßigkeit $\frac{\mu}{\rho}\sim \lambda^3$ gut beobachten.
-Die Messwerte liegen alle nahe der gefitteten Gerade.
+Die Messwerte liegen alle nahe der gefitteten Geraden.
+Man hätte allerdings mehr Messwerte aufnehmen können, also mit einem kleineren $\Delta\theta$ arbeiten müssen, um die Gerade und somit den Proportionalitätsfaktor besser bestimmen zu können.
+Außerdem erhält man noch weitere Informationen, aus denen man auf Gesetzmäßigkeiten schließen kann, wenn man noch mehr Elemente vermisst.
 
 \bibliography{literatur}
 \bibliographystyle{babalpha}

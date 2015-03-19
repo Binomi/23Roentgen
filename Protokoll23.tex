@@ -396,7 +396,7 @@ Nutzt man $\nu=\frac{c}{\lambda}$ und stellt dann Formel \eqref{eq:moseley} um, 
 	\sigma_{R_\nu}&=\frac{c}{(Z-\sigma)^2\cdot\left(\frac{1}{n_f^2}-\frac{1}{n_s^2}\right)}\cdot \frac{\sigma_\lambda}{\lambda^2}\,.
 \end{align}
 Geht man davon aus, dass ein K$\alpha$-Übergang für die Kante verantwortlich ist, muss man mit $\sigma=1$, $n_f=1$ und $n_s=2$ rechnen.
-Ist der beobachtete Sprung jedoch ein K$\beta$-Übergang sind diese Werte zu benutzen: $\sigma=1.8$, $n_f=1$ und $n_s=3$.
+Ist der beobachtete Sprung jedoch ein K$\beta$-Übergang sind diese Werte\footnote{Quelle: http://de.wikipedia.org/wiki/Moseleysches_Gesetz} zu benutzen: $\sigma=1.8$, $n_f=1$ und $n_s=3$.
 Die so berechneten Werte finden sich in Tabelle \ref{tab:Rydberg} wieder.
 \begin{figure}[!htb]
 	\centering
@@ -447,11 +447,34 @@ Man erkennt bei allen drei Materialien den zu erwartenden linearen Zusammenhang.
 
 \section{Diskussion}
 \label{sec:diskussion}
+Bei diesem Versuch können die Praktikanten die Messergebnisse kaum negativ beeinflussen, da alles computergesteuert abläuft und justiert ist.
+
 \subsection{Charakteristische Fe-Strahlung}
+Die charkteristischen Linien von Eisen wurden mit einer Abweichung von weniger als $1\%$ gemessen (vgl Tab.\ref{tab:FeChar}).
+Zudem liegen fast alle tatsächlichen Werte im Fehlerintervall.
+Die Fehler wurden also richtig abgeschätzt.
+Die zu erwartende K$\alpha$-Doppellinie konnte jedoch nicht aufgelöst werden.
+Dazu hätte man eine kleinere Schrittweite $\Delta\theta$ des Winkels benötigt, da der Energieunterschied der beiden Niveaus sehr gering ist.\\
+Die erwartete Abhängigkeit der Intensität von der Anodenspannung $I_K\sim (U_A-U_K)^{1.5}$ konnte auch bestätigt werden (vgl. Abb.\ref{fig:anode}).
+
 \subsection{Bremsstrahlung und Planck-Konstante}
+In Abbildung \ref{fig:grenzLambda} ist das Produkt aus Anodenspannung und Grenzwellenlänge wie  erwartet annähernd konstant.
+Außerdem schneiden alle Fehlerintervalle die gefittete Konstante.
+Das Experiment stimmt also mit der Theorie überein.\\
+Der Messwert für die Planck-Konstante ist weniger als $1\%$ geringer als der tatsächliche Wert $h=6.626\cdot 10^{-34}\,$Js.
+Außerdem liegt dieser Wert im Fehlerintervall.
+Somit wurde das Plancksche Wirkungsquantum in diesem Versuch zufriedenstellend bestimmt.\\
+Die hohen Impulsraten bei kleineren Winkeln als des Grenzwinkels (vgl. Abb.\ref{fig:messung3a} deuten jedoch auf einen Fehler im Aufbau, etc. hin, da sie theoretisch nicht möglich sind.
+Warum sie trotzdem gemessen wurden, bleibt ein Rätsel.
 
 \subsection{Rydberg-Konstante}
+Der tatsächliche Wert der Rydbergfrequenz liegt bei $R_\nu=3.2899 \cdot 10^{15}\,\si\hertz$.
+Somit müssen die beobachteten Absorptionskanten von Kupfer und Nickel von K$\beta$-Übergängen hervorgerufen werden, denn dann stimmt die gemessene Rydbergfrequenz mit dem Literaturwert überein (vgl. Tabelle \ref{tab:Rydberg}).
+Die Abweichung ist sehr gering ($<1\%$) und außerdem liegt der Literaturwert in beiden Fehlerintervallen.
+
 \subsection{Absorption}
+In Abb.\ref{fig:abs_koeff(lambda)} kann man die erwartete Gesetzmäßigkeit $\frac{\mu}{\rho}\sim \lambda^3$ gut beobachten.
+Die Messwerte liegen alle nahe der gefitteten Gerade.
 
 \bibliography{literatur}
 \bibliographystyle{babalpha}
